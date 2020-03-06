@@ -1,14 +1,13 @@
 # req2lib - TUMSAT OPAC
-amazonの欲しい物リストから図書館webサイト([TUMSAT OPAC](https://lib.s.kaiyodai.ac.jp/opac/opac_search/?lang=0))への書籍リクエスト自動化スクリプト
+amazonの欲しい物リストから東京海洋大図書館webサイト([TUMSAT OPAC](https://lib.s.kaiyodai.ac.jp/opac/opac_search/?lang=0))への書籍リクエスト自動化スクリプト
 
 ## About req2lib
-Google Chrome を自動操作することによって、Amazonの公開されているほしい物リストから書籍とそのデータを取得  
-その後、図書館webサイト(tumsat OPAC)にて
-対象書籍を検索し、蔵書に含まれていなければ書籍リクエスト画面にて  
+Google Chrome を自動操作することによって、Amazonの公開されているほしい物リストから書籍とその情報を取得。 
+その後、図書館webサイト(tumsat OPAC)にログインし
+対象書籍を検索して、蔵書に含まれていなければ書籍リクエスト画面にて  
 自動的にフォーム入力を行い、その本をリクエストする。  
 また対象書籍の検索前に自身が行った過去の書籍リクエスト履歴を確認し、リクエストの重複を防ぐ。  
 以上の動作をボタンひとつで自動的に行うのでとても便利!!  
-headlessChrome(画面表示を行わない)にも対応。
 
 ## 注意!
 過去にクローラを用いたことで以下のような事件が発生しました。  
@@ -28,7 +27,7 @@ dockerを用いるかどうかで準備が異なる。
   
 ## 使い方
 以下 dockerを利用する場合を想定して説明を行う。
-1. docker動作環境を構築
+1. docker動作環境を構築(docker-composeも)
 2. amazon にて任意の名前で公開されたほしい物リストを作成  
 参考: [amazon ヘルプ](https://www.amazon.co.jp/gp/help/customer/display.html?nodeId=201936700)
 1. `mkdir req2lib`
