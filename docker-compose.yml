@@ -1,0 +1,13 @@
+version: '3'
+services:
+    req2lib:
+        # ビルドする場合はDockerfileの置き場所を以下に記述(相対)
+        build:
+           context: .
+        container_name: req2lib
+        tty: true
+        environment:
+            TZ: Asia/Tokyo
+        volumes:
+            - ./src:/home
+        command: python /home/req2lib.py --headless
